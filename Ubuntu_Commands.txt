@@ -1,0 +1,47 @@
+#commands for deployment of the site using docker on EC2 instance
+
+1 sudo apt update
+
+2 sudo apt install -y docker.io
+
+3 pwd
+
+4 ls
+
+5 scp-1 DockerTrialKey.pem calculator-app-2025041970927102-001.zip ubuntu@13.203.214.197:/home/ubuntu/
+
+6 unzip calculator-app-202504197092710Z-001.zip -d calculator-app
+
+7 sudo apt install unzip
+
+8 unzip calculator-app-20250419T092710Z-001.zip -d calculator-app
+
+9 ls
+
+10
+
+cd calculator-app/
+
+11 ls
+
+12 cd calculator-app/
+
+13 ls
+
+14 cd calculator-app/
+
+15 ls
+
+16 sudo systemctl start docker
+
+17 sudo systemctl enable docker
+
+18 sudo usermod ag docker ubuntu
+
+19 sudo apt install maven
+
+20 mvn clean package
+
+21 docker build -t calculator-app.
+
+22 docker run -d-p 8080:8080 calculator-app
